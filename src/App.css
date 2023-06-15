@@ -1,0 +1,83 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.rows {
+	margin: 20px 0;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	margin-bottom: 4px;
+}
+
+.letter {
+	width: 50px;
+	height: 50px;
+	border: 1px solid grey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 2em;
+	box-sizing: border-box;
+}
+
+.filled {
+	animation: scale-on-fill 0.3s ease-out;
+}
+
+@keyframes scale-on-fill {
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.guess {
+	color: white;
+	border: none;
+	transition: background 0.3s ease-out;
+}
+
+.guess.correct {
+	background: #6aaa64;
+}
+
+.guess.present {
+	background: #c9b458;
+}
+
+.guess.absent {
+	background: #787c7e;
+}
+
+.keyboard-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	margin-top: 4px;
+}
+
+.keyboard-row button {
+	min-width: 40px;
+	height: 50px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: none;
+	background: lightgray;
+	cursor: pointer;
+	font-size: 1em;
+}
