@@ -126,7 +126,6 @@ function App() {
 			)}
 			<section className="rows">
 				{guesses?.map((word, i) => {
-					console.log('map guesses');
 					return <Row key={`${id}-${i}`} word={word} check={i < currentRow} answer={answer} />;
 				})}
 			</section>
